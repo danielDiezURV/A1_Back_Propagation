@@ -3,10 +3,7 @@ import numpy as np
 import pandas as pd
 
 class DataPreprocessing:
-    
-    def load_dataset(self, filename):
-        return pd.read_csv(filename, sep='\t', header=0)
-    
+
     def scale_dataset(self, dataset, s_min, s_max):
         for col_idx in range(dataset.shape[1]):
             col_values = dataset.iloc[:, col_idx]
